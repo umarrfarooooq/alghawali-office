@@ -1,0 +1,10 @@
+.maidVideo iframe {
+    width: 100%;
+    border-radius: 1rem;
+    height: 23rem !important;
+}
+@media (min-width: 768px) {
+    .maidVideo iframe {
+        height: 45rem !important;
+    }
+}
