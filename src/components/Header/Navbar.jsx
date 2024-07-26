@@ -14,7 +14,7 @@ const Navbar = () =>{
         <div className="flex items-center justify-between">
             <div>
                 <Link to="/">
-                    <img src="https://www.alghawalimanpower.com/static/media/Group%202.bb033483138d53c80d39856edff45090.svg"/>
+                    <img src="https://access.alghawalimanpower.com/assets/logo-5TFBSHqF.svg"/>
                 </Link>
             </div>
             <div className="hidden sm:block">

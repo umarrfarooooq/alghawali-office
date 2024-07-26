@@ -3,7 +3,7 @@ import Card from "./Card";
 import axios from "axios";
 
 const axiosInstense = axios.create({
-    baseURL: import.meta.env.VITE_API_URL,
+    baseURL: import.meta.env.VITE_ACCESS_API_URL,
   })
 
 const Cards = () =>{

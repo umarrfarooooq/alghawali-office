@@ -63,18 +63,21 @@ const MaidDetails = () =>{
                 <div className="flex items-start gap-[24px] justify-between self-stretch w-full flex-col md:flex-row">
                 <div className="w-full md:w-[30rem] h-full">
                 <div className="maidVideo w-full rounded-2xl h-[23rem] md:h-[45rem] shadow-lg">
-                <YouTube
+
+                {maidDetails.videoLink.includes("youtube.com") || maidDetails.videoLink.includes("youtu.be") ? (
+                    <YouTube
                     videoId={extractYouTubeVideoId(maidDetails.videoLink)}
                     opts={opts}
                     className="w-full h-full rounded-2xl"
                 />
+                ) : (
+                    <video controls className="w-full h-full rounded-2xl">
+                        <source src={`${import.meta.env.VITE_ACCESS_API_URL}${maidDetails.videoLink}`} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                )} 
+
                 </div>
-                {/* <iframe
-                    className="w-full rounded-2xl h-[23rem] md:h-[45rem]"
-                    src="https://www.youtube.com/embed/qWXYx-qEYFk"
-                    title="YouTube Video"
-                    style={{boxShadow:"0px 9px 30px 0px rgba(7, 42, 91, 0.10)"}}
-                /> */}
 
                 </div>
                 <div className="w-full md:h-[45rem]">
